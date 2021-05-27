@@ -1,6 +1,6 @@
 package com.example.VeterHub
 
-import android.arch.lifecycle.ViewModel
+import androidx.lifecycle.ViewModel
 
 class FragmentExampleViewModel : ViewModel() {
     // TODO: Implement the ViewModel
