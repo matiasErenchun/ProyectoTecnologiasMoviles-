@@ -6,14 +6,16 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.activityViewModels
 
 class FragmentExample : Fragment() {
 
+    private val miViewModel : MainViewModel by activityViewModels()
     companion object {
         fun newInstance() = FragmentExample()
     }
 
-    private lateinit var viewModel: FragmentExampleViewModel
+    private lateinit var viewModel: MainViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -25,7 +27,7 @@ class FragmentExample : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         viewModel = ViewModelProvider(this, ViewModelProvider.NewInstanceFactory()).get(
-            FragmentExampleViewModel::class.java
+            MainViewModel::class.java
         )
         // TODO: Use the ViewModel
     }

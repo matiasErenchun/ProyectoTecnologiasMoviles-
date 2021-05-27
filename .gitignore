@@ -18,3 +18,5 @@ local.properties
 *.bin
 
 *.lock
+
+app/google-services.json
