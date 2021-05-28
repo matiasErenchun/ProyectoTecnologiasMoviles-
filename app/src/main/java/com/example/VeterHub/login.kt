@@ -6,10 +6,18 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.EditText
+import android.widget.TextView
+import android.widget.Toast
 import androidx.fragment.app.activityViewModels
 import com.google.firebase.auth.FirebaseAuth
 
 class LoginFragment : Fragment() {
+    private lateinit var btnLogin : Button;
+    private lateinit var miView : View;
+    private lateinit var textLoginOk : TextView;
+    private lateinit var textEmail : EditText;
+    private lateinit var textPassword: EditText;
     private val miViewModel : MainViewModel by activityViewModels()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -20,27 +28,53 @@ class LoginFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_login, container, false)
+        this.miView = inflater.inflate(R.layout.fragment_login, container, false)
+        this.textEmail = this.miView.findViewById(R.id.TextEmailAddress);
+        this.textPassword = this.miView.findViewById(R.id.TextPassword)
+        this.textLoginOk = this.miView.findViewById(R.id.LoginnnnOk);
+        this.btnLogin = this.miView.findViewById(R.id.LogIn);
+        this.btnLogin.setOnClickListener(object : View.OnClickListener {
+            override fun onClick(v: View?) {
+                login();
+                textLoginOk.text = miViewModel.getEmail();
+            }
+        })
+        return this.miView;
     }
 
-    public fun login()
+    private  fun login()
     {
         var reeturn = " error ";
-        val correo = R.id.TextEmailAddress.toString().trim();
-        val passworD = R.id.TextPassword.toString().trim();
-        FirebaseAuth.getInstance().signInWithEmailAndPassword(correo,passworD)
-            .addOnCompleteListener {
-                if (it.isSuccessful)
-                {
-                    reeturn = it.result?.user?.email?: " no email";
-                    this.miViewModel.setEmail(reeturn);
-                    println(reeturn)
+        val correo = this.textEmail.text.toString();
+        val passworD =this.textPassword.text.toString();
+        if(correo.isEmpty())
+        {
+            Toast.makeText(context,"correo sin elementos",Toast.LENGTH_SHORT).show()
+        }
+        else if (passworD.isEmpty())
+        {
+            Toast.makeText(context,"password sin elementos",Toast.LENGTH_SHORT).show()
+        }
+        else
+        {
+            // esto es un print pero en la cara a lo choro
+            Toast.makeText(context,correo,Toast.LENGTH_LONG).show()
+            Toast.makeText(context,passworD,Toast.LENGTH_LONG).show()
+            val arr = FirebaseAuth.getInstance().signInWithEmailAndPassword(correo,passworD)
+                .addOnCompleteListener {
+                    if (it.isSuccessful)
+                    {
+                        reeturn = it.result?.user?.email?: " no email";
+                        this.miViewModel.setEmail(reeturn);
+                        println(reeturn)
+                    }
+                    else
+                    {
+                        reeturn = "mal login"
+                        this.miViewModel.setEmail(reeturn);
+                    }
                 }
-                else
-                {
-                    reeturn = "mal login"
-                    this.miViewModel.setEmail(reeturn);
-                }
-            }
+        }
+
     }
 }

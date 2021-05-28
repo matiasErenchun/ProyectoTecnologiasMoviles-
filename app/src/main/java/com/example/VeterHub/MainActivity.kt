@@ -11,7 +11,6 @@ import androidx.fragment.app.FragmentTransaction
 
 class MainActivity : AppCompatActivity()
 {
-    private val fragmentTrasaction = supportFragmentManager.beginTransaction()
     private val miViewModel : MainViewModel by viewModels();
     override fun onCreate(savedInstanceState: Bundle?)
     {
@@ -21,6 +20,7 @@ class MainActivity : AppCompatActivity()
 
     public fun onClick( view: View)
     {
+        val fragmentTrasaction = supportFragmentManager.beginTransaction()
         val fragmentExample = FragmentExample();
         val fragment2 = Fragmento2();
         val loginFragment = LoginFragment();
@@ -36,13 +36,6 @@ class MainActivity : AppCompatActivity()
            R.id.Button2 ->
            {
                fragmentTrasaction.replace(R.id.containerFragment, fragment2)
-               fragmentTrasaction.commit()
-           }
-           R.id.LogIn ->
-           {
-               loginFragment.login()
-               println(this.miViewModel.getEmail())
-               fragmentTrasaction.replace(R.id.containerFragment, fragmentExample)
                fragmentTrasaction.commit()
            }
        }
