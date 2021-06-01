@@ -36,4 +36,8 @@
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
 
+    <!-- TEXTOS DE LA LISTA DE VETERINARIOS -->
+    <string name="nombre_veterinario">Nombre Veterinario 1</string>
+    <string name="trabajo_veterinario">Clinica Vetalemana</string>
+    <string name="volver">Volver</string>
 </resources>
