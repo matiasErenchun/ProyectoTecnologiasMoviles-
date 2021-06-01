@@ -2,7 +2,7 @@
     <string name="app_name">VeterHub</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-
+  
     <!-- INFORMACION BASICA PARA FORMULARIOS -->
     <string name="registro_Veterinario">Registro Veterinario</string>
     <string name="datos_Personales">Datos Personales</string>
