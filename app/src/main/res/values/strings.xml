@@ -25,4 +25,8 @@
 
     <string name="siguiente_Button">Siguiente</string>
 
+    <!-- TEXTOS DE LA LISTA DE VETERINARIOS -->
+    <string name="nombre_veterinario">Nombre Veterinario 1</string>
+    <string name="trabajo_veterinario">Clinica Vetalemana</string>
+    <string name="volver">Volver</string>
 </resources>
