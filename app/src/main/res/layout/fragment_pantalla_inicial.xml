@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".pantallaInicial">
+
+    <ImageView
+        android:id="@+id/logovetinit"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="-220dp"
+        android:src="@drawable/logofinal" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/usuario"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:hint="Usuario"
+        android:layout_gravity="center"
+        android:layout_marginTop="-70dp"
+        >
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/pass"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:hint="Contraseña"
+        android:layout_gravity="center"
+
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/a"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:text="Iniciar sesión"
+        android:layout_gravity="center"
+        android:layout_marginTop="120dp"
+        />
+    <Button
+        android:id="@+id/b"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:text="Registrarse"
+        android:layout_gravity="center"
+        android:layout_marginTop="170dp"
+        />
+    <Button
+        android:id="@+id/c"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:text="Navegar sin conexión"
+        android:layout_gravity="center"
+        android:layout_marginTop="220dp"
+        />
+
+
+
+</FrameLayout>
