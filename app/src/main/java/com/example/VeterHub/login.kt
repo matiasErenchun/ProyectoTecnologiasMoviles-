@@ -29,16 +29,8 @@ class LoginFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         this.miView = inflater.inflate(R.layout.fragment_login, container, false)
-        this.textEmail = this.miView.findViewById(R.id.TextEmailAddress);
-        this.textPassword = this.miView.findViewById(R.id.TextPassword)
         this.textLoginOk = this.miView.findViewById(R.id.LoginnnnOk);
-        this.btnLogin = this.miView.findViewById(R.id.LogIn);
-        this.btnLogin.setOnClickListener(object : View.OnClickListener {
-            override fun onClick(v: View?) {
-                login();
-                textLoginOk.text = miViewModel.getEmail();
-            }
-        })
+        textLoginOk.text = miViewModel.getEmail();
         return this.miView;
     }
 
@@ -66,7 +58,6 @@ class LoginFragment : Fragment() {
                     {
                         reeturn = it.result?.user?.email?: " no email";
                         this.miViewModel.setEmail(reeturn);
-                        println(reeturn)
                     }
                     else
                     {

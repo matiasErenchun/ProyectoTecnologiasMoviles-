@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".pantallaInicial">
+    tools:context=".PantallaInicial">
 
     <ImageView
         android:id="@+id/logovetinitPI"
@@ -25,9 +25,9 @@
 
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/correoInput"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-
             />
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -38,10 +38,10 @@
         android:layout_height="50dp"
         android:hint="Contraseña"
         android:layout_gravity="center"
-
         >
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/contrseñaInput"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             />
@@ -49,7 +49,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
-        android:id="@+id/botonIniciarSesion"
+        android:id="@+id/botonIniciarSesio"
         android:layout_width="250dp"
         android:layout_height="50dp"
         android:text="Iniciar sesión"
