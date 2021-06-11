@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group
+        android:id="@+id/group1"
+        >
+        <item
+            android:id="@+id/perfilCliente"
+            android:title="Perfil" />
+        <item
+            android:id="@+id/historialDeMensajesCliente"
+            android:title="Historial de mensajes" />
+        <item
+            android:id="@+id/solicitarCitaCliente"
+            android:title="Solicitar cita" />
+        <item
+            android:id="@+id/citaActualCliente"
+            android:title="Cita actual" />
+        <item
+            android:id="@+id/veterinariosCliente"
+            android:title="Veterinarios" />
+        <item
+            android:id="@+id/gestionarMascotasCliente"
+            android:title="Gestionar mascotas" />
+    </group>
+</menu>
