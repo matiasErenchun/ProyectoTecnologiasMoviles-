@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "407226758643",
+    "project_id": "veterihub",
+    "storage_bucket": "veterihub.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:407226758643:android:8235e0ad351b9884078e86",
+        "android_client_info": {
+          "package_name": "com.example.VeterHub"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "407226758643-cmct60ild3m9dgsokg834mc8fla2s995.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA58iFk8aTvx4XRfh6xSdc8i8DLYkRdr-8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "407226758643-cmct60ild3m9dgsokg834mc8fla2s995.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
