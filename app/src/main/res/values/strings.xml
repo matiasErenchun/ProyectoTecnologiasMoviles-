@@ -24,6 +24,7 @@
     <string name="conf_pass_Hint">Confirmar Contraseña</string>
 
     <string name="siguiente_Button">Siguiente</string>
+    <string name="registrar_Button">Registrar</string>
     <!-- Strings related to login -->
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password</string>
