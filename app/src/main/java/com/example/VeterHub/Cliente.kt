@@ -2,12 +2,12 @@ package com.example.VeterHub
 
 class Cliente
 {
-    lateinit var id: String;
-    lateinit var correo: String;
-    lateinit var nombres: String;
-    lateinit var apellidos: String;
-    lateinit var contacto: String;
-    lateinit var nombreUsuario: String;
+    var id: String;
+    var correo: String;
+    var nombres: String;
+    var apellidos: String;
+    var contacto: String;
+    var nombreUsuario: String;
 
     constructor(
         id: String,

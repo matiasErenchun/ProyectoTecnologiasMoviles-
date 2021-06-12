@@ -256,7 +256,7 @@
                     android:layout_height="match_parent">
 
                     <EditText
-                        android:id="@+id/editTextTextPersonName8"
+                        android:id="@+id/id_grado"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:ems="12"
@@ -277,7 +277,7 @@
                     android:layout_height="match_parent">
 
                     <EditText
-                        android:id="@+id/editTextTextPersonName9"
+                        android:id="@+id/id_universidad"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:ems="12"
@@ -298,7 +298,7 @@
                     android:layout_height="match_parent">
 
                     <EditText
-                        android:id="@+id/editTextTextPersonName10"
+                        android:id="@+id/id_cod_titulo"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:ems="12"
@@ -322,7 +322,7 @@
                         android:id="@+id/btn_registrar"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/siguiente_Button"
+                        android:text="@string/registrar_Button"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"

@@ -91,7 +91,6 @@ class PantallaInicial : Fragment() {
                         this.miViewModel.setEmail(reeturn);
                     }
                 }
-
         }
 
     }

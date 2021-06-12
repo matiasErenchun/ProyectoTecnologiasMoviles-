@@ -92,8 +92,8 @@ class RegistroCliente : Fragment() {
                 FirebaseFirestore.getInstance().
                 collection("/Usuario/Rol/Cliente/")
                     .document(texxto).set(cliente)
-                    .addOnSuccessListener { Toast.makeText(context,"salio bien", Toast.LENGTH_SHORT) }
-                    .addOnFailureListener { Toast.makeText(context,"salio mal", Toast.LENGTH_SHORT)  }
+                    .addOnSuccessListener { Toast.makeText(context,"salio bien", Toast.LENGTH_SHORT).show() }
+                    .addOnFailureListener { Toast.makeText(context,"salio mal", Toast.LENGTH_SHORT).show()  }
             }
             else
             {
