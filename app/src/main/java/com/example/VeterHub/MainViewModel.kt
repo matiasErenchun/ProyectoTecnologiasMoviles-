@@ -1,32 +1,27 @@
 package com.example.VeterHub
 
+import android.util.Log
 import androidx.lifecycle.ViewModel
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.DocumentId
 import com.google.firebase.firestore.FirebaseFirestore
+import kotlin.math.log
 
 class MainViewModel : ViewModel()
 {
-    private var firebaseStore = FirebaseFirestore.getInstance();
+
     private var email: String =" ";
-    private lateinit var userCliente: Cliente;
+    lateinit var userCliente: Cliente;
     private lateinit var userVeterinario: Veterinario;
     var out: String =  "no paso nada";
 
-    fun setUser(id: String)
+    fun setCliente(user: Cliente)
     {
-        this.firebaseStore.collection("/Usuario/Rol/Cliente/").document(id).get().
-        addOnSuccessListener {
-            if(it.exists())
-            {
-                var id = it.get("id" as String);
-                var correo = it.get("correo" as String)
-                var nombres = it.get("nombres" as String)
-                var apellidos = it.get("apellidos" as String)
-                var contacto = it.get("contacto" as String)
-                var nombreUsuario = it.get("nombreUsuario" as String);
-            }
-        }
+        this.userCliente = user;
+    }
+    fun setVeterinario(user : Veterinario)
+    {
+        this.userVeterinario = user;
     }
     fun setEmail(email: String)
     {

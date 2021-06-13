@@ -8,6 +8,7 @@ class Cliente
     var apellidos: String;
     var contacto: String;
     var nombreUsuario: String;
+    var mascotas: ArrayList<String>;
 
     constructor(
         id: String,
@@ -23,5 +24,6 @@ class Cliente
         this.apellidos = apellidos
         this.contacto = contacto
         this.nombreUsuario = nombreUsuario
+        this.mascotas = arrayListOf();
     }
 }

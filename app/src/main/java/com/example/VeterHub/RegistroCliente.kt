@@ -92,7 +92,15 @@ class RegistroCliente : Fragment() {
                 FirebaseFirestore.getInstance().
                 collection("/Usuario/Rol/Cliente/")
                     .document(texxto).set(cliente)
-                    .addOnSuccessListener { Toast.makeText(context,"salio bien", Toast.LENGTH_SHORT).show() }
+                    .addOnSuccessListener {
+                        Toast.makeText(context,"salio bien", Toast.LENGTH_SHORT).show()
+                        val inicio =  PantallaInicial();
+                        activity?.supportFragmentManager?.
+                        beginTransaction()?.
+                        replace(R.id.containerFragment,inicio)?.
+                        addToBackStack(null)?.
+                        commit()
+                    }
                     .addOnFailureListener { Toast.makeText(context,"salio mal", Toast.LENGTH_SHORT).show()  }
             }
             else

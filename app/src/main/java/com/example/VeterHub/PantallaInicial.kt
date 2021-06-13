@@ -1,6 +1,7 @@
 package com.example.VeterHub
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -10,6 +11,7 @@ import android.widget.Toast
 import androidx.fragment.app.activityViewModels
 import com.google.android.material.textfield.TextInputEditText
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.firestore.FirebaseFirestore
 
 class PantallaInicial : Fragment() {
     private lateinit var btnInicioSesion : Button;
@@ -76,14 +78,20 @@ class PantallaInicial : Fragment() {
                 .addOnCompleteListener {
                     if (it.isSuccessful)
                     {
+
                         reeturn = it.result?.user?.email?: " no email";
                         this.miViewModel.setEmail(reeturn);
-                        val logInFragment =  LoginFragment();
-                        activity?.supportFragmentManager?.
-                        beginTransaction()?.
-                        replace(R.id.containerFragment,logInFragment)?.
-                        addToBackStack(null)?.
-                        commit()
+                        when(it.result?.user?.uid)
+                        {
+                            null -> Log.e("error" ,"error")
+                            else -> {
+                                var uid = it.result?.user?.uid ?: " "
+                                Log.i("uid" ,uid)
+                                this.setUserData(uid)
+
+                            }
+                        }
+
                     }
                     else
                     {
@@ -93,6 +101,66 @@ class PantallaInicial : Fragment() {
                 }
         }
 
+    }
+    fun setUserData(uid: String)
+    {
+        FirebaseFirestore.getInstance().collection("/Usuario/Rol/Cliente/").document(uid).get().
+        addOnSuccessListener {
+            if(it.exists())
+            {
+
+                var id = it.get("id").toString();
+                var correo = it.get("correo").toString()
+                var nombres = it.get("nombres").toString()
+                var apellidos = it.get("apellidos").toString()
+                var contacto = it.get("contacto").toString()
+                var nombreUsuario = it.get("nombreUsuario").toString()
+                var cliente  = Cliente(id, correo, nombres, apellidos, contacto, nombreUsuario)
+                var mascotasfire = arrayOf(it.get("mascotas"));
+                mascotasfire.forEach { a ->   Log.i("cadena", a.toString() )}
+                var misMascotas = arrayListOf<String>()
+                Log.i("cadena", misMascotas.size.toString() )
+                Log.i("nombre", cliente.nombres)
+                cliente.mascotas = misMascotas;
+                this.miViewModel.setCliente(cliente);
+                val menucliente =  MenuInicialCliente();
+                activity?.supportFragmentManager?.
+                beginTransaction()?.
+                replace(R.id.containerFragment,menucliente)?.
+                addToBackStack(null)?.
+                commit()
+            }
+        }
+        FirebaseFirestore.getInstance().collection("/Usuario/Rol/Veterinario").document(uid).get().
+        addOnSuccessListener {
+            if(it.exists())
+            {
+
+                var id = it.get("id").toString();
+                var correo = it.get("correo").toString()
+                var nombres = it.get("nombres").toString()
+                var apellidos = it.get("apellidos").toString()
+                var contacto = it.get("contacto").toString()
+                var nombreUsuario = it.get("nombreUsuario").toString()
+                var gradoMaximo = it.get("gradoMaximo").toString()
+                var universidad = it.get("universidad").toString()
+                var codigoTitulo = it.get("codigoTitulo").toString()
+                var veterinario  = Veterinario(id, correo, nombres, apellidos, contacto, nombreUsuario,gradoMaximo, universidad, codigoTitulo)
+                var mascotasfire = arrayOf(it.get("mascotas"));
+                mascotasfire.forEach { a ->   Log.i("cadena", a.toString() )}
+                var misMascotas = arrayListOf<String>()
+                Log.i("cadena", misMascotas.size.toString() )
+                Log.i("nombre", veterinario.nombres)
+                veterinario.pasientes = misMascotas;
+                this.miViewModel.setVeterinario(veterinario);
+                val loginFragment =  LoginFragment();
+                activity?.supportFragmentManager?.
+                beginTransaction()?.
+                replace(R.id.containerFragment,loginFragment)?.
+                addToBackStack(null)?.
+                commit()
+            }
+        }
     }
 
 }
