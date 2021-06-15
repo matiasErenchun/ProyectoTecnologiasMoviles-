@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".verPerfilMascotaVeterinario">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/pawprint"
+                android:layout_gravity="center"
+                android:layout_marginTop="75dp"
+                app:riv_border_width="2dp"
+                app:riv_border_color="@color/colorPrimary"
+                app:riv_oval="true"/>
+
+            <TextView
+                android:id="@+id/nombreAnimal"
+                android:layout_marginTop="30dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nombre Mascota"
+                android:textSize="24dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_gravity="center"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Dueño"
+                    android:textColor="@color/gray"
+                    android:textStyle="italic"
+                    android:textSize="12sp"
+                    android:layout_gravity="center|left"/>
+
+                <TextView
+                    android:id="@+id/nombreDueño"
+                    android:layout_marginTop="-5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nombre Dueño"
+                    android:textSize="18dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:layout_gravity="center"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Alias"
+                    android:textColor="@color/gray"
+                    android:textStyle="italic"
+                    android:textSize="12sp"
+                    android:layout_gravity="center|left"/>
+
+                <TextView
+                    android:id="@+id/aliasAnimal"
+                    android:layout_marginTop="-5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sobrenombre Mascota"
+                    android:textSize="18dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:layout_gravity="center"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tipo"
+                    android:textColor="@color/gray"
+                    android:textStyle="italic"
+                    android:textSize="12sp"
+                    android:layout_gravity="center|left"/>
+
+                <TextView
+                    android:id="@+id/tipoAnimal"
+                    android:layout_marginTop="-5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Vaca"
+                    android:textSize="18dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:layout_gravity="center"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Raza"
+                    android:textColor="@color/gray"
+                    android:textStyle="italic"
+                    android:textSize="12sp"
+                    android:layout_gravity="center|left"/>
+
+                <TextView
+                    android:id="@+id/razaAnimal"
+                    android:layout_marginTop="-5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Común"
+                    android:textSize="18dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:layout_gravity="center"/>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/buttonEnviarSolicitud"
+                android:layout_width="110dp"
+                android:layout_height="50dp"
+                android:text="Enviar Solicitud"
+                android:textSize="13sp"
+                android:background="@color/colorPrimary"
+                android:layout_gravity="center"
+                android:layout_marginTop="180dp"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</FrameLayout>
