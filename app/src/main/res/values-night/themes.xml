@@ -1,10 +1,12 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.VeterHub" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="Theme.VeterHub" parent="Theme.MaterialComponents.Light.NoActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/purple_200</item>
-        <item name="colorPrimaryDark">@color/purple_700</item>
-        <item name="colorAccent">@color/teal_200</item>
+        <item name="colorPrimary">@color/azul_200</item>
+        <item name="colorPrimaryVariant">@color/azul_700</item>
+        <item name="colorSecondary">@color/turquesa_200</item>
+        <item name="colorSecondaryVariant">@color/turquesa_700</item>
+        <item name="colorAccent">@color/naranjo_500</item>
         <!-- Customize your theme here. -->
     </style>
 </resources>

@@ -16,29 +16,10 @@ class MainActivity : AppCompatActivity()
     {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-    }
-
-    public fun onClick( view: View)
-    {
         val fragmentTrasaction = supportFragmentManager.beginTransaction()
-        val fragmentExample = FragmentExample();
-        val fragment2 = Fragmento2();
-        val loginFragment = LoginFragment();
+        val pantallaDeInicioFragment = PantallaInicial();
+        fragmentTrasaction.replace(R.id.containerFragment, pantallaDeInicioFragment);
+        fragmentTrasaction.commit()
 
-       when (view.id)
-       {
-           R.id.GoToLogin ->
-           {
-
-               fragmentTrasaction.replace(R.id.containerFragment, loginFragment)
-               fragmentTrasaction.commit()
-           }
-           R.id.Button2 ->
-           {
-               fragmentTrasaction.replace(R.id.containerFragment, fragment2)
-               fragmentTrasaction.commit()
-           }
-       }
     }
-
 }
