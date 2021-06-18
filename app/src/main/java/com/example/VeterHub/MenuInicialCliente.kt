@@ -1,10 +1,8 @@
 package com.example.VeterHub
 
 import android.os.Bundle
+import android.view.*
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -18,6 +16,7 @@ private const val ARG_PARAM2 = "param2"
  */
 class MenuInicialCliente : Fragment() {
 
+    lateinit var miView: View;
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
     }
@@ -27,7 +26,11 @@ class MenuInicialCliente : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_menu_inicial_cliente, container, false)
+        this.miView = inflater.inflate(R.layout.fragment_menu_inicial_cliente, container, false)
+        return this.miView;
     }
 
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        super.onCreateOptionsMenu(menu, inflater)
+    }
 }
