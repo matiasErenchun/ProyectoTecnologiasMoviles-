@@ -46,7 +46,7 @@ class Cliente0Registrarse : Fragment()
         });
         this.btnCliente.setOnClickListener(object : View.OnClickListener {
             override fun onClick(v: View?) {
-                val registroClienteFragment =  RegistroCliente();
+                val registroClienteFragment =  registroCliente();
                 activity?.supportFragmentManager?.
                 beginTransaction()?.
                 replace(R.id.containerFragment, registroClienteFragment)?.

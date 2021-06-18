@@ -153,10 +153,10 @@ class PantallaInicial : Fragment() {
                 Log.i("nombre", veterinario.nombres)
                 veterinario.pasientes = misMascotas;
                 this.miViewModel.setVeterinario(veterinario);
-                val loginFragment =  LoginFragment();
+                val pantallaInicioVeterinario =  MenuInicialVeterinario();
                 activity?.supportFragmentManager?.
                 beginTransaction()?.
-                replace(R.id.containerFragment,loginFragment)?.
+                replace(R.id.containerFragment,pantallaInicioVeterinario)?.
                 addToBackStack(null)?.
                 commit()
             }

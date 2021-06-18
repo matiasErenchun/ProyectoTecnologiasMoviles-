@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainnavvet"
+    app:startDestination="@id/perfil_Veterinario">
+
+    <fragment
+        android:id="@+id/perfil_Veterinario"
+        android:name="com.example.VeterHub.PerfilVeterinario"
+        android:label="fragment_perfil__veterinario"
+        tools:layout="@layout/fragment_perfil__veterinario" />
+    <fragment
+        android:id="@+id/pacientes_veterinario"
+        android:name="com.example.VeterHub.pacientes_veterinario"
+        android:label="fragment_pacientes_veterinario"
+        tools:layout="@layout/fragment_pacientes_veterinario" />
+    <fragment
+        android:id="@+id/gestionarClientesVet"
+        android:name="com.example.VeterHub.gestionarClientesVet"
+        android:label="fragment_gestionar_clientes_vet"
+        tools:layout="@layout/fragment_gestionar_clientes_vet" />
+</navigation>

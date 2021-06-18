@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".pacientes_veterinario">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/listaPacientes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Esta es la que se debería generar por cada paciente que tenga el veterinario -->
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:id="@+id/Paciente"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:src="@drawable/pawprint"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_marginTop="5dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:text="Nombre Mascota"/>
+
+                    <TextView
+                        android:layout_marginTop="5dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="11sp"
+                        android:textStyle="italic"
+                        android:textColor="@color/gray"
+                        android:text="Dueño"/>
+
+                    <TextView
+                        android:layout_marginTop="-3dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:text="Nombre Dueño"/>
+
+                </LinearLayout>
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TableRow
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp">
+
+                        <Button
+                            android:id="@+id/crearFicha"
+                            android:layout_width="80dp"
+                            android:layout_height="35dp"
+                            android:layout_weight="0"
+                            android:layout_gravity="center"
+                            android:text="Crear Ficha"
+                            android:textSize="7sp"
+                            android:layout_marginLeft="10dp"/>
+
+                        <Button
+                            android:id="@+id/editarFicha"
+                            android:layout_width="80dp"
+                            android:layout_height="35dp"
+                            android:layout_weight="0"
+                            android:layout_gravity="center"
+                            android:text="Editar Ficha"
+                            android:textSize="7sp" />
+                    </TableRow>
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                        <Button
+                            android:id="@+id/agregarDiagnostico"
+                            android:layout_width="80dp"
+                            android:layout_height="35dp"
+                            android:layout_weight="0"
+                            android:layout_gravity="center"
+                            android:text="Agregar Diagnostico"
+                            android:textSize="7sp"
+                            android:layout_marginLeft="10dp"/>
+
+                        <Button
+                            android:id="@+id/fichaCompleta"
+                            android:layout_width="80dp"
+                            android:layout_height="35dp"
+                            android:layout_weight="0"
+                            android:layout_gravity="center"
+                            android:text="Ficha Completa"
+                            android:textSize="7sp" />
+                    </TableRow>
+                </TableLayout>
+            </LinearLayout>
+            <!-- Hasta aca es el objeto a crear -->
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</FrameLayout>

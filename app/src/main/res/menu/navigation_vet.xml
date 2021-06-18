@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="Perfil">
+        <menu>
+            <item android:id="@+id/id_perfil_Veterinario"
+                android:icon="@drawable/user"
+                android:title="Perfil"/>
+            <item android:id="@+id/id_subcategoriaEditarPerfil"
+                android:icon="@drawable/editprofile"
+                android:title="Editar Perfil"/>
+        </menu>
+    </item>
+    <item android:title="Pacientes">
+        <menu>
+            <item android:id="@+id/id_subcategoriaAgenda"
+                android:icon="@drawable/calendar"
+                android:title="Agenda"/>
+            <item android:id="@+id/id_pacientes_veterinario"
+                android:icon="@drawable/pawprint"
+                android:title="Pacientes"/>
+            <item android:id="@+id/id_gestionarClientesVet"
+                android:icon="@drawable/navigation"
+                android:title="Gestionar Clientes"/>
+        </menu>
+    </item>
+    <item android:title="Ayuda">
+        <menu>
+            <item android:id="@+id/id_subcategoriaFaqs"
+                android:icon="@drawable/calendar"
+                android:title="FAQ's"/>
+            <item android:id="@+id/id_subcategoriaMesa"
+                android:icon="@drawable/pawprint"
+                android:title="Mesa de Ayuda"/>
+        </menu>
+    </item>
+</menu>
