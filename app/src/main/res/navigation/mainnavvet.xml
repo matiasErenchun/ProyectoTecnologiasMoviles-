@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/perfil_Veterinario"
-        android:name="com.example.VeterHub.Perfil_Veterinario"
+        android:name="com.example.VeterHub.PerfilVeterinario"
         android:label="fragment_perfil__veterinario"
         tools:layout="@layout/fragment_perfil__veterinario" />
     <fragment

@@ -2,14 +2,11 @@ package com.example.VeterHub
 
 import android.os.Build
 import android.os.Bundle
+import android.util.Log
+import android.view.*
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
-import android.widget.Toolbar
 import androidx.annotation.RequiresApi
 import androidx.navigation.*
-import com.google.android.material.navigation.NavigationView
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -42,8 +39,25 @@ class MenuInicialVeterinario : Fragment() {
         // Inflate the layout for this fragment
         this.miView = inflater.inflate(R.layout.fragment_menu_inicial_veterinario, container, false)
         this.toolbar =  this.miView.findViewById(R.id.id_toolbar_veterinario);
-        this.toolbar.inflateMenu(R.menu.navigation_vet)
+        this.toolbar.inflateMenu(R.menu.navigation_vet);
+        this.toolbar.setOnMenuItemClickListener { item ->
+            when (item?.itemId) {
+                R.id.id_perfil_Veterinario -> {
+                    val perfil = PerfilVeterinario();
+                    activity?.supportFragmentManager?.beginTransaction()
+                        ?.replace(R.id.containerFragment, perfil)?.addToBackStack(null)?.commit()
+                    true
+                }
+                R.id.id_subcategoriaEditarPerfil -> {
+                    // save profile changes
+                    true
+                }
+                else -> {
+                    Log.e("hola", "holaaaaa")
+                    false
+                }
+            }
+        }
         return this.miView;
     }
-
 }

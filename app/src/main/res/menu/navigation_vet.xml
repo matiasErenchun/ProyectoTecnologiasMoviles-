@@ -3,33 +3,33 @@
 
     <item android:title="Perfil">
         <menu>
-            <item android:id="@+id/perfil_Veterinario"
+            <item android:id="@+id/id_perfil_Veterinario"
                 android:icon="@drawable/user"
                 android:title="Perfil"/>
-            <item android:id="@+id/subcategoriaEditarPerfil"
+            <item android:id="@+id/id_subcategoriaEditarPerfil"
                 android:icon="@drawable/editprofile"
                 android:title="Editar Perfil"/>
         </menu>
     </item>
     <item android:title="Pacientes">
         <menu>
-            <item android:id="@+id/subcategoriaAgenda"
+            <item android:id="@+id/id_subcategoriaAgenda"
                 android:icon="@drawable/calendar"
                 android:title="Agenda"/>
-            <item android:id="@+id/pacientes_veterinario"
+            <item android:id="@+id/id_pacientes_veterinario"
                 android:icon="@drawable/pawprint"
                 android:title="Pacientes"/>
-            <item android:id="@+id/gestionarClientesVet"
+            <item android:id="@+id/id_gestionarClientesVet"
                 android:icon="@drawable/navigation"
                 android:title="Gestionar Clientes"/>
         </menu>
     </item>
     <item android:title="Ayuda">
         <menu>
-            <item android:id="@+id/subcategoriaFaqs"
+            <item android:id="@+id/id_subcategoriaFaqs"
                 android:icon="@drawable/calendar"
                 android:title="FAQ's"/>
-            <item android:id="@+id/subcategoriaMesa"
+            <item android:id="@+id/id_subcategoriaMesa"
                 android:icon="@drawable/pawprint"
                 android:title="Mesa de Ayuda"/>
         </menu>
