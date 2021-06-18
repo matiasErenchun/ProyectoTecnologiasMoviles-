@@ -45,13 +45,19 @@ class MenuInicialVeterinario : Fragment() {
                 R.id.id_perfil_Veterinario -> {
                     val perfil = PerfilVeterinario();
                     activity?.supportFragmentManager?.beginTransaction()
-                        ?.replace(R.id.containerFragment, perfil)?.addToBackStack(null)?.commit()
+                        ?.replace(R.id.id_container_Fragment_veterinario, perfil)?.addToBackStack(null)?.commit()
                     true
                 }
                 R.id.id_subcategoriaEditarPerfil -> {
                     // save profile changes
                     true
                 }
+                R.id.id_subcategoriaAgenda ->{ true }
+                R.id.id_pacientes_veterinario -> {true}
+                R.id.id_gestionarClientesVet -> { true }
+                R.id.id_subcategoriaFaqs -> {true}
+                R.id.id_subcategoriaMesa ->{true}
+
                 else -> {
                     Log.e("hola", "holaaaaa")
                     false

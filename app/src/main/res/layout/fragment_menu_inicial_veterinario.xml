@@ -12,7 +12,7 @@
         android:layout_height="match_parent">
 
         <LinearLayout
-            android:id="@+id/topLinearLayout"
+            android:id="@+id/id_topLinearLayout_veterinario"
             android:layout_width="match_parent"
             android:layout_height="?actionBarSize"
             android:background="@color/colorPrimary"
@@ -35,19 +35,22 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            app:layout_constraintTop_toBottomOf="@+id/topLinearLayout">
+            app:layout_constraintTop_toBottomOf="@+id/id_topLinearLayout_veterinario">
         </LinearLayout>
 
-        <fragment
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            app:layout_constraintTop_toBottomOf="@id/topLinearLayout"
+        <FrameLayout
+            android:id="@+id/id_container_Fragment_veterinario"
+            android:layout_width="400dp"
+            android:layout_height="668dp"
+            android:layout_margin="5dp"
             app:layout_constraintBottom_toBottomOf="parent"
-            android:id="@+id/navHostFragment"
-            android:name="androidx.navigation.fragment.NavHostFragment"
-            app:defaultNavHost="true"
-            app:navGraph="@navigation/mainnavvet"
-            />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/id_topLinearLayout_veterinario"
+            app:layout_constraintVertical_bias="0.712" />
+
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
