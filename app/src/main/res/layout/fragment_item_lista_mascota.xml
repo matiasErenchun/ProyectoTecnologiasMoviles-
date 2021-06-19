@@ -42,14 +42,13 @@
 
 
             <TextView
-                android:id = "@+id/first_line"
+                android:id = "@+id/id_item_nombre_mascotas"
                 android:layout_width = "wrap_content"
                 android:layout_height = "wrap_content"
                 android:layout_marginEnd = "16dp"
                 android:ellipsize="marquee"
                 android:singleLine="true"
-                android:text = "This is the title line"
-                android:textColor = "@color/black_light"
+                android:text = "nombre mascota"
                 android:textSize = "16sp"
                 android:fontFamily="sans-serif"/>
 

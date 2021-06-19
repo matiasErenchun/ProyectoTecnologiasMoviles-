@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -18,14 +19,16 @@ private const val ARG_PARAM2 = "param2"
  */
 class ItemListaMascota : Fragment() {
     // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
+    private var nombre: String? = null
+    private var duenno: String? = null
+    lateinit var myView: View;
+    lateinit var nombreMascota: TextView;
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
+            nombre = it.getString(ARG_PARAM1)
+            duenno = it.getString(ARG_PARAM2)
         }
     }
 
@@ -33,27 +36,14 @@ class ItemListaMascota : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_item_lista_mascota, container, false)
+
+        this.myView = inflater.inflate(R.layout.fragment_item_lista_mascota, container, false)
+        this.nombreMascota = this.myView.findViewById(R.id.id_item_nombre_mascotas);
+        this.nombreMascota.text = this.nombre;
+        return this.myView;
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment ItemListaMascota.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            ItemListaMascota().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
-            }
+    fun setNombre(nombre: String) {
+        this.nombre = nombre;
     }
 }

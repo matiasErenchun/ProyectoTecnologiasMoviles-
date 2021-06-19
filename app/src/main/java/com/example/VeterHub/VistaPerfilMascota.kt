@@ -20,6 +20,10 @@ class VistaPerfilMascota : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
+    lateinit var myView: View;
+    private var mascota1: Mascota = Mascota("pepe el perro")
+    private var mascota2: Mascota = Mascota("juan el gato")
+    private var mascotas: ArrayList<Mascota> = arrayListOf(mascota1,mascota2)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -34,26 +38,15 @@ class VistaPerfilMascota : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_vista_perfil_mascota, container, false)
+        this.myView = inflater.inflate(R.layout.fragment_vista_perfil_mascota, container, false)
+        this.mascotas.forEach{
+            var mascota = ItemListaMascota();
+            mascota.setNombre(it.getNombre());
+            activity?.supportFragmentManager?.beginTransaction()
+                ?.add(R.id.id_caja_gestionarmascotas, mascota)
+                ?.addToBackStack(null)?.commit()
+        }
+        return this.myView;
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment VistaPerfilMascota.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            VistaPerfilMascota().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
-            }
-    }
 }
