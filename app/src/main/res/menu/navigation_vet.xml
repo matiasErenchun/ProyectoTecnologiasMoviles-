@@ -1,27 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item android:title="Perfil">
         <menu>
             <item android:id="@+id/id_perfil_Veterinario"
                 android:icon="@drawable/user"
-                android:title="Perfil"/>
+                android:title="Perfil"
+                app:showAsAction="ifRoom|withText"/>
             <item android:id="@+id/id_subcategoriaEditarPerfil"
                 android:icon="@drawable/editprofile"
-                android:title="Editar Perfil"/>
+                android:title="Editar Perfil" />
         </menu>
     </item>
-    <item android:title="Pacientes">
+    <item android:title="@string/pacientes">
         <menu>
             <item android:id="@+id/id_subcategoriaAgenda"
                 android:icon="@drawable/calendar"
-                android:title="Agenda"/>
+                android:title="@string/agenda"
+                app:showAsAction="ifRoom|withText"/>
             <item android:id="@+id/id_pacientes_veterinario"
                 android:icon="@drawable/pawprint"
-                android:title="Pacientes"/>
+                android:title="@string/pacientes"
+                app:showAsAction="ifRoom|withText"/>
             <item android:id="@+id/id_gestionarClientesVet"
                 android:icon="@drawable/navigation"
-                android:title="Gestionar Clientes"/>
+                android:title="@string/gestionar_clientes"
+                app:showAsAction="ifRoom|withText"/>
         </menu>
     </item>
     <item android:title="Ayuda">

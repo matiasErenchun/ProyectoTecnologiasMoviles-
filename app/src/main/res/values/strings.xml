@@ -40,4 +40,7 @@
     <string name="nombre_veterinario">Nombre Veterinario 1</string>
     <string name="trabajo_veterinario">Clinica Vetalemana</string>
     <string name="volver">Volver</string>
+    <string name="gestionar_clientes">Gestionar Clientes</string>
+    <string name="pacientes">Pacientes</string>
+    <string name="agenda">Agenda</string>
 </resources>
