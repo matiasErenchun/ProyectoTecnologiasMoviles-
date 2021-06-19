@@ -25,8 +25,9 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:ems="10"
+                android:hint="Buscar Cliente"
                 android:inputType="textPersonName"
-                android:text="Busqueda Nuevo Cliente" />
+                />
 
             <Button
                 android:id="@+id/button2"
@@ -55,7 +56,7 @@
                 <ImageView
                     android:layout_width="70dp"
                     android:layout_height="70dp"
-                    android:src="@drawable/pawprint" />
+                    android:src="@drawable/user" />
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -66,30 +67,19 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="10dp"
-                        android:layout_marginTop="5dp"
-                        android:text="Nombre Mascota"
+                        android:layout_marginTop="10dp"
+                        android:text="Nombre_1 Nombre_2"
                         android:textColor="@color/black"
                         android:textSize="18sp"
                         android:textStyle="bold" />
-
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="10dp"
                         android:layout_marginTop="5dp"
-                        android:text="Dueño"
-                        android:textColor="@color/gray"
-                        android:textSize="11sp"
-                        android:textStyle="italic" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginTop="-3dp"
-                        android:text="Nombre Dueño"
+                        android:text="Apellido_1 Apellido_2"
                         android:textColor="@color/black"
-                        android:textSize="14sp"
+                        android:textSize="18sp"
                         android:textStyle="bold" />
 
                 </LinearLayout>
@@ -103,7 +93,7 @@
                         android:layout_height="45dp"
                         android:layout_marginEnd="20dp"
                         android:background="@color/colorPrimary"
-                        android:text="Ver Mascota"
+                        android:text="Ver Cliente"
                         android:textSize="10sp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
