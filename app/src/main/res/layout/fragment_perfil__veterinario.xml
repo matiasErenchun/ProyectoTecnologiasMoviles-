@@ -54,7 +54,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
             android:gravity="center"
-            android:text="Universidad de Tu mama"
+            android:text="Universidad de Talca"
             android:textColor="@color/black"
             android:textSize="16sp"
             android:textStyle="bold" />
