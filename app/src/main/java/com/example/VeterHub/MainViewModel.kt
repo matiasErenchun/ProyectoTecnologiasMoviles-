@@ -37,4 +37,8 @@ class MainViewModel : ViewModel()
     {
         return this.userVeterinario;
     }
+    fun getCliente(): Cliente
+    {
+        return this.userCliente;
+    }
 }
