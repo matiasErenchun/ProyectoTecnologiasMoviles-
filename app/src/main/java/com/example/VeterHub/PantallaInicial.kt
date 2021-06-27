@@ -117,8 +117,10 @@ class PantallaInicial : Fragment() {
                 var nombreUsuario = it.get("nombreUsuario").toString()
                 var cliente  = Cliente(id, correo, nombres, apellidos, contacto, nombreUsuario)
                 var mascotasfire = arrayOf(it.get("mascotas"));
-                mascotasfire.forEach { a ->   Log.i("cadena", a.toString() )}
                 var misMascotas = arrayListOf<String>()
+                mascotasfire.forEach { a ->
+                    var b = arrayOf(a)
+                    Log.i("cadenab", b.size.toString())}
                 Log.i("cadena", misMascotas.size.toString() )
                 Log.i("nombre", cliente.nombres)
                 cliente.mascotas = misMascotas;
@@ -146,9 +148,11 @@ class PantallaInicial : Fragment() {
                 var universidad = it.get("universidad").toString()
                 var codigoTitulo = it.get("codigoTitulo").toString()
                 var veterinario  = Veterinario(id, correo, nombres, apellidos, contacto, nombreUsuario,gradoMaximo, universidad, codigoTitulo)
-                var mascotasfire = arrayOf(it.get("mascotas"));
-                mascotasfire.forEach { a ->   Log.i("cadena", a.toString() )}
                 var misMascotas = arrayListOf<String>()
+                var mascotasfire = arrayListOf(it.get("mascotas"));
+                Log.i("firemas", mascotasfire.toString())
+                mascotasfire.forEach { a ->
+                    Log.i("cadenaa", a.toString() )}
                 Log.i("cadena", misMascotas.size.toString() )
                 Log.i("nombre", veterinario.nombres)
                 veterinario.pasientes = misMascotas;

@@ -71,129 +71,132 @@
 
 
             </RelativeLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="240dp"
+                android:layout_marginBottom="150dp"
+                android:orientation="vertical">
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tipoMascota"
+                    android:layout_width="200dp"
+                    android:layout_height="50dp"
+                    android:hint="Tipo"
+                    android:layout_gravity="center_horizontal"
+                    >
+
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/id_tipoMascotaInput"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/nombreMascota"
+                    android:layout_width="200dp"
+                    android:layout_height="50dp"
+                    android:hint="Nombre"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="20dp"
+                    >
+
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/id_nombreMascotaInput"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/raza"
+                    android:layout_width="200dp"
+                    android:layout_height="50dp"
+                    android:hint="Raza"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="20dp"
+
+                    >
+
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/id_razaMascotaInput"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/colorMascota"
+                    android:layout_width="200dp"
+                    android:layout_height="50dp"
+                    android:hint="Color"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="20dp"
+                    >
+
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/id_colorMascotaInput"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/id_peso_Mascota"
+                    android:layout_width="200dp"
+                    android:layout_height="50dp"
+                    android:hint="Peso mascota"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="20dp"
+                    >
+
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/id_peso_mascota_input"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
 
 
         </RelativeLayout>
 
+
     </ScrollView>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="240dp"
-        android:layout_marginBottom="150dp"
-        android:orientation="vertical">
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/tipoMascota"
-            android:layout_width="200dp"
-            android:layout_height="50dp"
-            android:hint="Tipo"
-            android:layout_gravity="center_horizontal"
-            >
 
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/tipoMascotaInput"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                />
-
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/nombreMascota"
-            android:layout_width="200dp"
-            android:layout_height="50dp"
-            android:hint="Nombre"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="20dp"
-            >
-
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/nombreMascotaInput"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                />
-
-        </com.google.android.material.textfield.TextInputLayout>
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/raza"
-            android:layout_width="200dp"
-            android:layout_height="50dp"
-            android:hint="Raza"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="20dp"
-
-            >
-
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/razaMascotaInput"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                />
-
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/colorMascota"
-            android:layout_width="200dp"
-            android:layout_height="50dp"
-            android:hint="Color"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="20dp"
-            >
-
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/colorMascotaInput"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                />
-
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/id_peso_Mascota"
-            android:layout_width="200dp"
-            android:layout_height="50dp"
-            android:hint="Peso mascota"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="20dp"
-            >
-
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/id_peso_mascota_input"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                />
-
-        </com.google.android.material.textfield.TextInputLayout>
-    </LinearLayout>
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="150dp"
+        android:layout_height="122dp"
         android:layout_alignParentBottom="true">
+
         <Button
-            android:id="@+id/botonIniciarSesio"
+            android:id="@+id/id_btn_guardarMascota"
             android:layout_width="120dp"
             android:layout_height="50dp"
-            android:text="Guardar"
             android:layout_gravity="center"
-            android:layout_marginTop="50dp"
             android:layout_marginLeft="50dp"
-            />
+            android:layout_marginTop="50dp"
+            android:text="Guardar" />
+
         <Button
-            android:id="@+id/guardarMascota"
+            android:id="@+id/id_btn_cancelar"
             android:layout_width="120dp"
             android:layout_height="50dp"
-            android:text="Cancelar"
             android:layout_gravity="center"
-            android:layout_marginTop="50dp"
             android:layout_marginLeft="250dp"
+            android:layout_marginTop="50dp"
             android:backgroundTint="@color/naranjo_500"
-            />
+            android:text="Cancelar" />
 
     </RelativeLayout>
 

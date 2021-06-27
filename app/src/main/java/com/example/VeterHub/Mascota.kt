@@ -9,9 +9,9 @@ class Mascota
     var nombre: String;
     var raza: String;
     var color: String;
-    var peso: Number;
+    var peso: Float;
 
-    constructor(id: String, idDueño: String, nombreDueño: String, tipo: String, nombre: String, raza: String, color: String, peso: Number)
+    constructor(id: String, idDueño: String, nombreDueño: String, tipo: String, nombre: String, raza: String, color: String, peso: Float)
     {
         this.id = id
         this.idDueño = idDueño

@@ -46,19 +46,8 @@ class VistaPerfilMascota : Fragment() {
             addToBackStack(null)?.
             commit()
         }
+        Log.e("mascotas", this.miViewModel.userCliente.mascotas.toString())
         getMascotas();
-        /*
-        btn_add_mascota.setOnClickListener(object : View.OnClickListener {
-            override fun onClick(v: View?) {
-                val registrar_mascota =  AgregarMascotaFragment();
-                activity?.supportFragmentManager?.
-                beginTransaction()?.
-                replace(R.id.containerFragment,registrar_mascota)?.
-                addToBackStack(null)?.
-                commit()
-            }
-        })
-    */
         return this.myView;
     }
 
@@ -78,7 +67,7 @@ class VistaPerfilMascota : Fragment() {
                     var raza = data.get("raza").toString()
                     var color = data.get("color").toString()
                     var pesoS = data.get("peso").toString()
-                    var peso = pesoS.toInt();
+                    var peso = pesoS.toFloat();
                     var mascota = ItemListaMascota();
                     mascota.setNombre(nombre);
                     activity?.supportFragmentManager?.beginTransaction()
