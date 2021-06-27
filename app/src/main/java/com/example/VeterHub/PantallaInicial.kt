@@ -119,10 +119,9 @@ class PantallaInicial : Fragment() {
                 var mascotasfire = arrayOf(it.get("mascotas"));
                 var misMascotas = arrayListOf<String>()
                 mascotasfire.forEach { a ->
-                    var b = arrayOf(a)
-                    Log.i("cadenab", b.size.toString())}
-                Log.i("cadena", misMascotas.size.toString() )
-                Log.i("nombre", cliente.nombres)
+                    var b = a.toString().trim('[',']')
+                    misMascotas.add(b);
+                }
                 cliente.mascotas = misMascotas;
                 this.miViewModel.setCliente(cliente);
                 val menucliente =  MenuInicialCliente();
@@ -148,13 +147,12 @@ class PantallaInicial : Fragment() {
                 var universidad = it.get("universidad").toString()
                 var codigoTitulo = it.get("codigoTitulo").toString()
                 var veterinario  = Veterinario(id, correo, nombres, apellidos, contacto, nombreUsuario,gradoMaximo, universidad, codigoTitulo)
-                var misMascotas = arrayListOf<String>()
                 var mascotasfire = arrayListOf(it.get("mascotas"));
-                Log.i("firemas", mascotasfire.toString())
+                var misMascotas = arrayListOf<String>()
                 mascotasfire.forEach { a ->
-                    Log.i("cadenaa", a.toString() )}
-                Log.i("cadena", misMascotas.size.toString() )
-                Log.i("nombre", veterinario.nombres)
+                    var b = a.toString().trim('[',']')
+                    misMascotas.add(b);
+                }
                 veterinario.pasientes = misMascotas;
                 this.miViewModel.setVeterinario(veterinario);
                 val pantallaInicioVeterinario =  MenuInicialVeterinario();
