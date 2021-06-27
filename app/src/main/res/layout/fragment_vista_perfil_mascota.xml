@@ -23,45 +23,44 @@
             </androidx.appcompat.widget.SearchView>
         </LinearLayout>
     </LinearLayout>
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
 
-    </ScrollView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="65dp"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/id_caja_gestionarmascotas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+        </ScrollView>
+
+    </LinearLayout>
+
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="92dp"
+        android:layout_height="99dp"
         android:layout_gravity="bottom"
-        >
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="20dp"></LinearLayout>
-        <LinearLayout
-            android:layout_width="56dp"
-            android:layout_height="56dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginStart="172dp">
-            <com.google.android.material.floatingactionbutton.FloatingActionButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                android:layout_alignEnd="@+id/imageview_account_profile"
-                android:id="@+id/floatingActionButton"
-                android:src="@drawable/outline_add_24"
-                app:maxImageSize="36dp"
-                app:tint="@color/white"
+        android:clickable="true">
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/id_add_mascota_floatingActionButton"
+            android:layout_marginTop="10dp"
+            android:layout_width="99dp"
+            android:layout_height="80dp"
+            android:layout_centerHorizontal="true"
+            android:clickable="true"
+            android:src="@drawable/editprofile"
+            app:maxImageSize="36dp"
+            app:tint="@color/white" />
 
-                />
 
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="20dp"
-            android:layout_marginTop="80dp">
-
-        </LinearLayout>
     </RelativeLayout>
-
 
 
 </FrameLayout>

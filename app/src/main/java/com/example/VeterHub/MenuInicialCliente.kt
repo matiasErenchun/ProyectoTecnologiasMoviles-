@@ -34,17 +34,36 @@ class MenuInicialCliente : Fragment() {
         this.toolbar.inflateMenu(R.menu.navigation_drawer_client);
         this.toolbar.setOnMenuItemClickListener { item ->
             when (item?.itemId) {
-                R.id.id_perfil_Veterinario -> {
-                    val perfil = PerfilVeterinario();
+                R.id.id_perfilCliente ->
+                {
+                    true
+                }
+                R.id.id_historialDeMensajesCliente ->
+                {
+                    true
+                }
+                R.id.id_solicitarCitaCliente ->
+                {
+                    true
+                }
+                R.id.id_citaActualCliente ->
+                {
+                    true
+                }
+                R.id.id_veterinariosCliente ->
+                {
+                    true
+                }
+                R.id.id_gestionarMascotasCliente ->
+                {
+                    val gestionarMascotas = VistaPerfilMascota()
                     activity?.supportFragmentManager?.beginTransaction()
-                        ?.replace(R.id.containerFragment, perfil)?.addToBackStack(null)?.commit()
+                        ?.replace(R.id.id_container_Fragment_cliente, gestionarMascotas)
+                        ?.addToBackStack(null)?.commit()
                     true
                 }
-                R.id.id_subcategoriaEditarPerfil -> {
-                    // save profile changes
-                    true
-                }
-                else -> {
+                else ->
+                {
                     Log.e("hola", "holaaaaa")
                     false
                 }
@@ -53,7 +72,4 @@ class MenuInicialCliente : Fragment() {
         return this.miView;
     }
 
-    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
-        super.onCreateOptionsMenu(menu, inflater)
-    }
 }
