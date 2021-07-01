@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".VistaMapaCliente">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@color/azul_500">
+        <LinearLayout
+            android:layout_width="300dp"
+            android:layout_height="30dp"
+            android:background="@color/white"
+            android:layout_gravity="center|center_horizontal"
+            android:layout_marginStart="50dp"
+            >
+            <androidx.appcompat.widget.SearchView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                >
+                <!-- En este layout ingresar el mapa desde mapa_v-->
+
+            </androidx.appcompat.widget.SearchView>
+        </LinearLayout>
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="99dp"
+        android:layout_gravity="bottom"
+        android:clickable="true">
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/id_add_mascota_floatingActionButton"
+            android:layout_marginTop="10dp"
+            android:layout_width="99dp"
+            android:layout_height="80dp"
+            android:layout_centerHorizontal="true"
+            android:clickable="true"
+            android:src="@drawable/outline_data_saver_on_24"
+            app:maxImageSize="36dp"
+            app:tint="@color/white" />
+
+
+    </RelativeLayout>
+
+
+</FrameLayout>
