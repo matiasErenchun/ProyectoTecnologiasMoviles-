@@ -32,4 +32,13 @@ class MainViewModel : ViewModel()
     {
         return this.email;
     }
+
+    fun getVeterinario(): Veterinario
+    {
+        return this.userVeterinario;
+    }
+    fun getCliente(): Cliente
+    {
+        return this.userCliente;
+    }
 }

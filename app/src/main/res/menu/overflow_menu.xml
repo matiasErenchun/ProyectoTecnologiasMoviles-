@@ -1,0 +1,9 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/option_1"
+        android:title="Perro" />
+    <item android:id="@+id/option_2"
+        android:title="Gato" />
+    <item android:id="@+id/option_3"
+        android:title="Caballo" />
+</menu>
