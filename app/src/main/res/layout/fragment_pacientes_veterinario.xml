@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -11,7 +12,7 @@
 
         <LinearLayout
             android:id="@+id/listaPacientes"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
@@ -46,58 +47,38 @@
 
                 </LinearLayout>
 
-                <TableLayout
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <TableRow
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="0dp">
-
-                        <Button
-                            android:id="@+id/crearFicha"
-                            android:layout_width="80dp"
-                            android:layout_height="35dp"
-                            android:layout_weight="0"
-                            android:layout_gravity="center"
-                            android:text="Crear Ficha"
-                            android:textSize="7sp"
-                            android:layout_marginLeft="10dp"/>
-
-                        <Button
-                            android:id="@+id/editarFicha"
-                            android:layout_width="80dp"
-                            android:layout_height="35dp"
-                            android:layout_weight="0"
-                            android:layout_gravity="center"
-                            android:text="Editar Ficha"
-                            android:textSize="7sp" />
-                    </TableRow>
-                    <TableRow
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <Button
+                        android:id="@+id/crearFicha"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent" >
+                        android:layout_height="35dp"
+                        android:layout_gravity="center"
+                        android:paddingStart="-1dp"
+                        android:paddingTop="-1dp"
+                        android:paddingEnd="-1dp"
+                        android:paddingBottom="-1dp"
+                        android:text="Crear Ficha"
+                        android:textSize="10sp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp" />
+                    <Button
+                        android:id="@+id/fichasClinicas"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:layout_gravity="center"
+                        android:paddingStart="-1dp"
+                        android:paddingTop="-1dp"
+                        android:paddingEnd="-1dp"
+                        android:paddingBottom="-1dp"
+                        android:text="Fichas Clínicas"
+                        android:textSize="10sp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp" />
 
-                        <Button
-                            android:id="@+id/agregarDiagnostico"
-                            android:layout_width="80dp"
-                            android:layout_height="35dp"
-                            android:layout_weight="0"
-                            android:layout_gravity="center"
-                            android:text="Agregar Diagnostico"
-                            android:textSize="7sp"
-                            android:layout_marginLeft="10dp"/>
-
-                        <Button
-                            android:id="@+id/fichaCompleta"
-                            android:layout_width="80dp"
-                            android:layout_height="35dp"
-                            android:layout_weight="0"
-                            android:layout_gravity="center"
-                            android:text="Ficha Completa"
-                            android:textSize="7sp" />
-                    </TableRow>
-                </TableLayout>
+                </LinearLayout>
             </LinearLayout>
             <!-- Hasta aca es el objeto a crear -->
 
