@@ -132,4 +132,9 @@
     <string name="gestionar_clientes">Gestionar Clientes</string>
     <string name="pacientes">Pacientes</string>
     <string name="agenda">Agenda</string>
+    <string name="horario_vet">Horario</string>
+
+    <!-- Textos Vista Mapa Cliente -->
+    <string name="vmc_pregunta">Ingrese su dirección:</string>
+
 </resources>
