@@ -49,7 +49,6 @@
         android:hint="Contraseña"
         android:layout_gravity="center"
         android:layout_marginTop="50dp"
-
         >
 
         <com.google.android.material.textfield.TextInputEditText
@@ -68,6 +67,7 @@
         android:layout_gravity="center"
         android:layout_marginTop="150dp"
         />
+
     <Button
         android:id="@+id/botonRegistrarse"
         android:layout_width="250dp"
@@ -76,6 +76,7 @@
         android:layout_gravity="center"
         android:layout_marginTop="200dp"
         />
+
     <Button
         android:id="@+id/botonNavegarSinConexion"
         android:layout_width="250dp"
@@ -84,7 +85,5 @@
         android:layout_gravity="center"
         android:layout_marginTop="250dp"
         />
-
-
 
 </FrameLayout>
