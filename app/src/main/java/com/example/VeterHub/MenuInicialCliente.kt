@@ -52,6 +52,10 @@ class MenuInicialCliente : Fragment() {
                 }
                 R.id.id_veterinariosCliente ->
                 {
+                    val listaveteriarios = listaVeterinarios()
+                    activity?.supportFragmentManager?.beginTransaction()
+                        ?.replace(R.id.id_container_Fragment_cliente, listaveteriarios)
+                        ?.addToBackStack(null)?.commit()
                     true
                 }
                 R.id.id_gestionarMascotasCliente ->
@@ -59,6 +63,15 @@ class MenuInicialCliente : Fragment() {
                     val gestionarMascotas = VistaPerfilMascota()
                     activity?.supportFragmentManager?.beginTransaction()
                         ?.replace(R.id.id_container_Fragment_cliente, gestionarMascotas)
+                        ?.addToBackStack(null)?.commit()
+                    true
+                }
+                R.id.id_compartirUbicacionCliente ->
+                {
+
+                    val mapa = VistaMapaCliente()
+                    activity?.supportFragmentManager?.beginTransaction()
+                        ?.replace(R.id.id_container_Fragment_cliente, mapa)
                         ?.addToBackStack(null)?.commit()
                     true
                 }

@@ -12,12 +12,10 @@ import kotlinx.android.synthetic.main.fragment_mapa_v.*
 
 class MapaV : Fragment(), OnMapReadyCallback {
     lateinit var googleMap: GoogleMap
+    lateinit var miView: View;
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        map_view.onCreate(savedInstanceState)
-        map_view.onResume()
-        map_view.getMapAsync(this)
     }
 
     override fun onCreateView(
@@ -25,12 +23,11 @@ class MapaV : Fragment(), OnMapReadyCallback {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_mapa_v, container, false)
+        this.miView = inflater.inflate(R.layout.fragment_mapa_v, container, false);
+        return this.miView;
     }
 
     override fun onMapReady(map: GoogleMap) {
-        map?.let {
-            googleMap = it
-        }
+        googleMap = map
     }
 }

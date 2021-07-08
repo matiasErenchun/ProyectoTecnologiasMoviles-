@@ -50,11 +50,20 @@ class MenuInicialVeterinario : Fragment() {
                     true
                 }
                 R.id.id_subcategoriaEditarPerfil -> {
-                    // save profile changes
+                    val perfil = PerfilVeterinario()
+                    activity?.supportFragmentManager?.beginTransaction()
+                        ?.replace(R.id.id_container_Fragment_veterinario, perfil)
+                        ?.addToBackStack(null)?.commit()
                     true
                 }
                 R.id.id_subcategoriaAgenda ->{ true }
-                R.id.id_pacientes_veterinario -> {true}
+                R.id.id_pacientes_veterinario -> {
+                    val pacientes = PacientesVeterinario()
+                    activity?.supportFragmentManager?.beginTransaction()
+                        ?.replace(R.id.id_container_Fragment_veterinario, pacientes)
+                        ?.addToBackStack(null)?.commit()
+                    true
+                }
                 R.id.id_gestionarClientesVet -> {
                     val clientes = gestionarClientesVet()
                     activity?.supportFragmentManager?.beginTransaction()

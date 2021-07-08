@@ -20,4 +20,8 @@
         <item
             android:id="@+id/id_gestionarMascotasCliente"
             android:title="Gestionar mascotas" />
+        <item
+            android:id="@+id/id_compartirUbicacionCliente"
+            android:title="Compartir ubicacion"
+            />
 </menu>
