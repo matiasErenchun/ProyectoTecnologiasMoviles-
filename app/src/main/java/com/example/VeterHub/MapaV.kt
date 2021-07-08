@@ -4,6 +4,7 @@ import android.Manifest
 import android.content.pm.PackageManager
 import android.location.Location
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -39,11 +40,19 @@ class MapaV : Fragment(), OnMapReadyCallback {
     }
 
     override fun onMapReady(map: GoogleMap) {
+        Log.e("mapa","estoy dentro ");
         googleMap = map
         crearMarcador()
     }
-    private fun crearMarcador() {
+    fun crearMarcador()
+    {
+        val coordenadas = LatLng(-34.9955, -71.2271)
+        val marcadorActual = MarkerOptions().position(coordenadas).title("mi posicion actual")
+        googleMap.addMarker(marcadorActual)
+    }
 
+    private fun crearMarcador1() {
+        Log.e("mapa","estoy dentro ");
         if (activity?.let {
                 ActivityCompat.checkSelfPermission(
                     it,
@@ -56,11 +65,12 @@ class MapaV : Fragment(), OnMapReadyCallback {
                 )
             } != PackageManager.PERMISSION_GRANTED
         ) {
-            
-            return
+            googleMap.isMyLocationEnabled = true
         }
+        Log.e("mapa","estoy dentro ");
         fusedLocationClient.lastLocation
             .addOnSuccessListener { location : Location? ->
+                Log.e("mapa","estoy dentro ");
                 if (location != null)
                 {
                     val coordenadas = LatLng(location.latitude,location.longitude)
@@ -69,6 +79,7 @@ class MapaV : Fragment(), OnMapReadyCallback {
                 }
 
             }
+        Log.e("mapa","estoy fuera");
     }
     private fun permisosDelocalizacionAceptados()
         = activity?.let {
