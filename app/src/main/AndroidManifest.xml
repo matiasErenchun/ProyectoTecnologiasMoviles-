@@ -17,7 +17,7 @@
         android:theme="@style/Theme.VeterHub">
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyCIIOx9Zqoq3NIRNqLUhttKf2cg7wL4GBc"
+            android:value="AIzaSyC9j1rLIMWvcdnPBY2Vjj-kQiGH6ebILf4"
             />
         <activity android:name=".MainActivity">
             <intent-filter>
