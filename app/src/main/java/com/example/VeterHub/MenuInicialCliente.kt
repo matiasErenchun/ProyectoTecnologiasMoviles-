@@ -32,10 +32,19 @@ class MenuInicialCliente : Fragment() {
         this.miView = inflater.inflate(R.layout.fragment_menu_inicial_cliente, container, false);
         this.toolbar = this.miView.findViewById(R.id.id_toolbar_cliente);
         this.toolbar.inflateMenu(R.menu.navigation_drawer_client);
+        val bienvenidaCliente = BienvenidaCliente()
+        activity?.supportFragmentManager?.beginTransaction()
+            ?.replace(R.id.id_container_Fragment_cliente, bienvenidaCliente)
+            ?.addToBackStack(null)?.commit()
+
         this.toolbar.setOnMenuItemClickListener { item ->
             when (item?.itemId) {
                 R.id.id_perfilCliente ->
                 {
+                    val perfilCliente = PerfilCliente()
+                    activity?.supportFragmentManager?.beginTransaction()
+                        ?.replace(R.id.id_container_Fragment_cliente, perfilCliente)
+                        ?.addToBackStack(null)?.commit()
                     true
                 }
                 R.id.id_historialDeMensajesCliente ->
