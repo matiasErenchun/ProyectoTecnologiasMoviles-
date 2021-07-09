@@ -73,20 +73,17 @@
                     android:hint="Contraseña"
                     android:layout_gravity="center"
                     android:layout_marginBottom="70dp"
-
+                    app:endIconMode="password_toggle"
                     >
-
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/contrseñaInput"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:inputType="textPassword"
                         />
-
                 </com.google.android.material.textfield.TextInputLayout>
-
             </LinearLayout>
-
-
+            
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
