@@ -136,9 +136,18 @@
 
     <!-- Textos Vista Mapa Cliente -->
     <string name="vmc_pregunta">Ingrese su dirección:</string>
+
     <!-- Textos Vista Bienvenida Cliente -->
     <string name="vbc_bienvenido">Bienvenid@,</string>
     <string name="vbc_intro">VeteriHub está a tu disposición ahora, navega por la aplicación para encontrar a tu veterinario adecuado, registrar tus mascotas y más.<br />
         Accede al menú arriba a la izquierda para navegar a través de la aplicación.</string>
+
+    <!-- Textos Vista Perfil Cliente -->
+    <string name="vpc_nombre_usuario">Usuario:</string>
+    <string name="vpc_nombres">Nombre:</string>
+    <string name="vpc_apellidos">Apellidos:</string>
+    <string name="vpc_contacto">Contacto:</string>
+    <string name="vpc_cantidad_mascotas">Cantidad de mascotas:</string>
+
 
 </resources>
