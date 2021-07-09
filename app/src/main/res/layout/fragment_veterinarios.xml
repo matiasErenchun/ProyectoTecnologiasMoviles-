@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".veterinarios">
+    tools:context=".Veterinarios">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -22,15 +22,18 @@
         </LinearLayout>
     </LinearLayout>
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="65dp"
-        android:orientation="vertical">
+        android:layout_marginTop="?actionBarSize"
+        android:orientation="vertical"
+        android:id="@+id/id_caja_veterinarios_clientes"
+        >
 
         <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            >
 
             <LinearLayout
                 android:id="@+id/id_caja_lista_vet"
@@ -39,6 +42,6 @@
                 android:orientation="vertical" />
         </ScrollView>
 
-    </LinearLayout>
+    </RelativeLayout>
 
 </FrameLayout>

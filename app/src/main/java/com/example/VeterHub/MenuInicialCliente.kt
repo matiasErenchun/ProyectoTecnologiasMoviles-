@@ -61,10 +61,14 @@ class MenuInicialCliente : Fragment() {
                 }
                 R.id.id_veterinariosCliente ->
                 {
-                    val listaveteriarios = listaVeterinarios()
+                    val vets = Veterinarios()
+                    activity?.supportFragmentManager?.beginTransaction()
+                        ?.replace(R.id.id_container_Fragment_cliente, vets)
+                        ?.addToBackStack(null)?.commit()
+                    /*val listaveteriarios = listaVeterinarios()
                     activity?.supportFragmentManager?.beginTransaction()
                         ?.replace(R.id.id_container_Fragment_cliente, listaveteriarios)
-                        ?.addToBackStack(null)?.commit()
+                        ?.addToBackStack(null)?.commit()*/
                     true
                 }
                 R.id.id_gestionarMascotasCliente ->
