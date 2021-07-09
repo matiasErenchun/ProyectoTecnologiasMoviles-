@@ -28,6 +28,7 @@
             </androidx.appcompat.widget.Toolbar>
         </LinearLayout>
 
+
         <FrameLayout
             android:id="@+id/id_container_Fragment_cliente"
             android:layout_width="match_parent"
